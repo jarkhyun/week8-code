@@ -7,7 +7,7 @@ name: Deploy to Firebase Hosting on merge
     branches:
       - main
 env:
-  REACT_APP_VERSION: affogato
+  REACT_APP_VERSION: ${{ secrets.REACT_APP_VERSION }}
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
