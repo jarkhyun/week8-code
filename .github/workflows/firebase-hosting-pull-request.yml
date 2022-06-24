@@ -3,8 +3,6 @@
 
 name: Deploy to Firebase Hosting on PR
 'on': pull_request
-env:
-  REACT_APP_VERSION: ${{ secrets.REACT_APP_VERSION }}
 jobs:
   build_and_preview:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
@@ -15,6 +13,5 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_GITHUB_APPLICATION_E4A37 }}'
-          projectId: github-application-e4a37
-          entryPoint: ./github-app
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_GITHUB_APPLICATION_36803 }}'
+          projectId: github-application-36803
